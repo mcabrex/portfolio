@@ -1,10 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great');
+
 .App {
   text-align: center;
 }
 
 .bar {
   &-top {
-    position: absolute;
+    // position: absolute;
     top: 0;
   }
   &-bottom {
@@ -19,4 +21,8 @@
     align-items: center;
     justify-content: center;  
   }
+}
+
+.content {
+  font-family: 'Fredericka the Great', cursive;
 }

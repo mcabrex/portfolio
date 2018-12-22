@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BlackBar } from './BlackBar';
+import { BlackBar, Content } from './components';
 import './App.scss';
 
 class App extends Component {
@@ -9,6 +9,7 @@ class App extends Component {
         <div className="bar-top">
           <BlackBar />
         </div>
+        <Content />
         <div className="bar-bottom">
           <BlackBar />
         </div>
