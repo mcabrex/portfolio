@@ -1,0 +1,22 @@
+.App {
+  text-align: center;
+}
+
+.bar {
+  &-top {
+    position: absolute;
+    top: 0;
+  }
+  &-bottom {
+    position: absolute;
+    bottom: 0;
+  }
+  &-black {
+    background-color: black;
+    height: 10vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+  }
+}
