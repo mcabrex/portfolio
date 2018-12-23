@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { ProjectDisplay } from "./ProjectDisplay";
 
 class Content extends Component {
   state = {
@@ -38,7 +39,10 @@ class Content extends Component {
         <h1>{title}</h1>
         <h2>{description}</h2>
         <div className="projects-container">
-          Projects
+          <ProjectDisplay />
+          <ProjectDisplay />
+          <ProjectDisplay />
+          <ProjectDisplay />
         </div>
       </div>
     );
