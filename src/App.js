@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { BlackBar, Content } from './components';
-import './App.scss';
+import './styles/index.scss';
 
 class App extends Component {
   render() {

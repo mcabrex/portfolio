@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Special+Elite');
+@import './bar.scss';
+@import './projects.scss';
+
+.App {
+    text-align: center;
+}
+
+.content {
+    font-family: 'Special Elite', cursive;
+    margin: 2.5%;
+}
+
+h1 {
+    margin-bottom: 0;
+}
+
+h2 {
+    font-family: 'Open Sans Condensed', sans-serif;
+    margin-top: 0;
+}
