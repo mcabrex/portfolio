@@ -30,7 +30,7 @@ class Title extends Component {
   render() {
     const {title} = this.state
     return (
-      <h1 className="content">
+      <h1>
         {title}
       </h1>
     );

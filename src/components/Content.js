@@ -3,19 +3,18 @@ import ProjectDisplay from "./ProjectDisplay";
 import Title from "./Title";
 class Content extends Component {
   state = {
-    title: "{  }",
     description: "",
     urls: []
   };
 
   componentDidMount() {
     this.setState({
-      description : "developer. engineer. artist.",
+      description : "developer. engineer. another buzzword.",
       urls: [
-        "url('/cover-images/TheoryScript.png')",
         "url('/cover-images/TabTracker.png')",
+        "url('/cover-images/TheoryScript.png')",
+        "url('/cover-images/Crossover.png')",
         "url('/cover-images/DungeonMaster.png')",
-        "url('/cover-images/Crossover.png')"
       ]
     })
   }
@@ -25,11 +24,13 @@ class Content extends Component {
     const urls= this.state.urls
     return (
       <div className="content">
-        <Title />
-        <h2>{description}</h2>
+        <div className="title">
+          <Title />
+          <h2>{description}</h2>
+        </div>
         <div className="projects-container">
         {
-          urls.map(imageUrl => <ProjectDisplay imageurl={imageUrl}/>)
+          urls.map(imageUrl => <ProjectDisplay key={imageUrl} imageurl={imageUrl}/>)
         }
         </div>
       </div>

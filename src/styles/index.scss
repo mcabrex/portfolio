@@ -5,11 +5,16 @@
 
 .App {
     text-align: center;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 10vh 80vh 10vh;
 }
 
 .content {
     font-family: 'Special Elite', cursive;
-    margin: 2.5%;
+    height: 80vh;
+    display: grid;
+    grid-template-rows: 10vh 70vh;
 }
 
 h1 {

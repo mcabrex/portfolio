@@ -1,15 +1,15 @@
 .bar {
     &-top {
+        // position top bar
         top: 0;
     }
     &-bottom {
+        // position bottom bar
         position: absolute;
         bottom: 0;
     }
     &-black {
         background-color: black;
-        height: 10vh;
-        width: 100vw;
         display: flex;
         align-items: center;
         justify-content: center;

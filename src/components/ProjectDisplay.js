@@ -15,8 +15,7 @@ export default class ProjectDisplay extends Component {
 
     render(){
         return(
-            <div ref="projectCover" className="projects-display">
-            </div>
+            <div ref="projectCover" className="projects-display" />
         )
     }
 } 

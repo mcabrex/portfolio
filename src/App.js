@@ -1,18 +1,14 @@
-import React, { Component } from 'react';
-import { BlackBar, Content } from './components';
-import './styles/index.scss';
+import React, { Component } from "react";
+import { BlackBar, Content } from "./components";
+import "./styles/index.scss";
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="bar-top">
-          <BlackBar />
-        </div>
+        <BlackBar />
         <Content />
-        <div className="bar-bottom">
-          <BlackBar />
-        </div>
+        <BlackBar />
       </div>
     );
   }
