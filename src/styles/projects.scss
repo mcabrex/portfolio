@@ -2,7 +2,7 @@
     &-container {
         color: white;
         height: 60vh;
-        width: 60vw;
+        width: 75vw;
         margin: 0 auto;
         display: grid;
         grid-auto-flow: column;
@@ -11,8 +11,12 @@
     &-display {
         background-color: green;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.815);
+        background-position: center; 
+        background-size: cover;
+        background-repeat: no-repeat;
+
         &:hover {
-            opacity: 0.5;
+            opacity: 0.75;
         }
     }
 }
