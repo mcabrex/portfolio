@@ -4,7 +4,7 @@ export default class ProjectDisplay extends Component {
     constructor(props){
         super();
         this.state = {
-        }
+        };
     }
 
     componentDidMount(){

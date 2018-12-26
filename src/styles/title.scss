@@ -1,0 +1,11 @@
+// 13vh
+.title {
+    padding: 1vh;
+    &-title {
+        margin-bottom: 0;
+    }
+    &-description {
+        font-family: 'Open Sans Condensed', sans-serif;
+        margin-top: 0;
+    }
+}
