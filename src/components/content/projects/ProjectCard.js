@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 
-export default class ProjectDisplay extends Component {
+export default class ProjectCard extends Component {
     constructor(props){
         super();
         this.state = {
+            project: {}
         };
     }
 
@@ -15,7 +16,9 @@ export default class ProjectDisplay extends Component {
 
     render(){
         return(
-            <div ref="projectCover" className="projects-display" />
+            <div ref="projectCover" className="project-card" >
+                <h1>Project Name</h1>
+            </div>
         )
     }
 } 

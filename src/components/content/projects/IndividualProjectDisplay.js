@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-export default class ProjectCard extends Component {
+export default class IndividualProjectDisplay extends Component {
     constructor(props){
         super();
         this.state = {
@@ -9,14 +9,17 @@ export default class ProjectCard extends Component {
 
     componentDidMount(){
         const imageurl = this.props.imageurl
+        console.log('url',imageurl)
         const project = this.refs.projectCover
+        console.log('ref',project)
         project.style.backgroundImage = imageurl
     }
 
     render(){
+
         return(
-            <div ref="projectCover" className="project-card" >
-                this is the project
+            <div ref="projectCover" className="projects-container-display"
+            >
             </div>
         )
     }

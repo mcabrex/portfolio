@@ -7,15 +7,15 @@
         display: grid;
         grid-auto-flow: column;
         grid-gap: 1rem;
-    }
-    &-display {
-        background-color: green;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.815);
-        background-position: left; 
-        background-size: cover;
-        background-repeat: no-repeat;
-        &:hover {
-            opacity: 0.75;
+        &-display {
+            background-color: green;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.815);
+            background-position: left; 
+            background-size: cover;
+            background-repeat: no-repeat;
+            &:hover {
+                opacity: 0.75;
+            }
         }
     }
 }
