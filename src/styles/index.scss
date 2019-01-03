@@ -16,6 +16,8 @@
 .content {
     font-family: 'Special Elite', cursive;
     height: 80vh;
-    display: grid;
-    grid-template-rows: 15vh 65vh;
+    //flex to place title div at the top, and carousel underneath it to fit the rest of parent container
+    display: flex;
+    flex-flow: column;
+
 }
