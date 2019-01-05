@@ -1,7 +1,7 @@
 .projects {
     &-container {
-        padding: 1.5%;
-        height: inherit;
+        //height 100% of the carousel
+        height: 100%;
         width: 65vw;
         //margin 0 to center
         margin: 0 auto;
@@ -11,6 +11,7 @@
         grid-gap: 1rem;
         &-display {
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.815);
+            //position of background in the display divs
             background-position: left; 
             background-size: cover;
             background-repeat: no-repeat;

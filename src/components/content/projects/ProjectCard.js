@@ -4,20 +4,24 @@ export default class ProjectCard extends Component {
     constructor(props){
         super();
         this.state = {
-            project: {}
+            project: {},
+            projectClicked: false
         };
     }
 
     componentDidMount(){
-        const imageurl = this.props.imageurl
+        const {projectInfo} = this.props
         const project = this.refs.projectCover
-        project.style.backgroundImage = imageurl
+        project.style.backgroundImage = projectInfo.backgroundImageUrl
     }
 
     render(){
         return(
             <div ref="projectCover" className="project-card" >
-                <h1>Project Name</h1>
+                {/* pass down the clickEvent from the ProjectDisplay div */}
+                <div onClick={this.props.clickEvent} className="project-card-title">
+                <div>This is a project</div>
+                </div>
             </div>
         )
     }

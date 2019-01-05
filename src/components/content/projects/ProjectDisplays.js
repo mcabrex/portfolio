@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import IndividualProjectDisplay from "./IndividualProjectDisplay";
+import ProjectCard from "./ProjectCard";
 
 export default class ProjectDisplays extends Component {
   constructor(props) {
@@ -9,6 +10,7 @@ export default class ProjectDisplays extends Component {
       projects: {},
       projectClicked: false
     };
+    this.handleClick = this.handleClick.bind(this)
   }
 
   componentDidMount() {
@@ -30,23 +32,42 @@ export default class ProjectDisplays extends Component {
     });
   }
 
+  handleClick(evt){
+    const projectImageUrl = evt.target.style.backgroundImage 
+    const projectName = projectImageUrl.slice(19, projectImageUrl.length - 6);
+    const currentClickedState = this.state.projectClicked
+    const {projects} = this.state
+    console.log(projects)
+    const currentProject = projects[projectName]
+    if(evt.target.className !== "projects-container"){
+      this.setState({
+        projectClicked: !currentClickedState,
+        currentProject
+      })
+    } 
+  }
+
   render() {
     const { currentProject, projectClicked, projects } = this.state;
-    // console.log(projects)
     return (
-      <div ref="projectCover" className="projects-container">
+      <div onClick={this.handleClick} ref="projectCover" className="projects-container">
         {
-                 Object.keys(projects).map(project => {
-                    //destructure the backgroundImageUrl property on the project object, pass it down as a prop
-                    let { backgroundImageUrl } = projects[project];
-                    return (
-                      <IndividualProjectDisplay
-                        ref={project}
-                        key={backgroundImageUrl}
-                        imageurl={backgroundImageUrl}
-                      />
-                    );
-                  }) 
+          projectClicked ? 
+          <ProjectCard 
+            clickEvent={this.handleClick}
+            projectInfo={currentProject}
+          /> :
+          Object.keys(projects).map(project => {
+          //destructure the backgroundImageUrl property on the project object, pass it down as a prop
+          let { backgroundImageUrl } = projects[project];
+          return (
+            <IndividualProjectDisplay
+              ref={project}
+              key={backgroundImageUrl}
+              imageurl={backgroundImageUrl}
+            />
+          );
+          })
         }
       </div>
     );

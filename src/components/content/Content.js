@@ -40,7 +40,10 @@ class Content extends Component {
           <Title/>
           <h2 className="title-description">{description}</h2>
         </div>
+        <div className="carousel">
+          {/* carousel slides will go here */}
           <ProjectDisplays />
+        </div>
       </div>
     );
   }
