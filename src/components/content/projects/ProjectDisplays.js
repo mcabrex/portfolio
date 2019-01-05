@@ -1,14 +1,13 @@
 import React, { Component } from "react";
 import IndividualProjectDisplay from "./IndividualProjectDisplay";
 import ProjectCard from "./ProjectCard";
-import {pngUrls,projectList} from "./projectInformation";
+import {projectList} from "./projectInformation";
 
 export default class ProjectDisplays extends Component {
   constructor(props) {
     super();
     this.state = {
       currentProject: {},
-      projects: {},
       projectList: [],
       projectClicked: false
     };
@@ -29,7 +28,6 @@ export default class ProjectDisplays extends Component {
     projectList.forEach(project =>{
       if(project.name === projectName) currentProject = project
     })
-    console.log('curr',currentProject)
     if(evt.target.className !== "projects-container"){
       this.setState({
         projectClicked: !currentClickedState,
@@ -39,7 +37,7 @@ export default class ProjectDisplays extends Component {
   }
 
   render() {
-    const { currentProject, projectClicked, projects, projectList } = this.state;
+    const { currentProject, projectClicked, projectList } = this.state;
     return (
       <div onClick={this.handleClick} className="projects-container">
         {
