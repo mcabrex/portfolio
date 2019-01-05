@@ -4,18 +4,22 @@ export default class IndividualProjectDisplay extends Component {
     constructor(props){
         super();
         this.state = {
+            projectName: ""
         };
     }
 
     componentDidMount(){
-        const imageurl = this.props.imageurl
+        const {imageurl,projectName} = this.props
         const project = this.refs.projectCover
         project.style.backgroundImage = imageurl
+        this.setState({
+            projectName
+        })
     }
 
     render(){
         return(
-            <div ref="projectCover" className="projects-container-display" />
+            <div ref="projectCover" id={this.state.projectName} className="projects-container-display" />
         )
     }
 } 

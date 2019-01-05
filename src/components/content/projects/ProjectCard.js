@@ -17,10 +17,12 @@ export default class ProjectCard extends Component {
 
     render(){
         return(
-            <div ref="projectCover" className="project-card" >
+            <div ref="projectCover" className="project-slide" >
                 {/* pass down the clickEvent from the ProjectDisplay div */}
-                <div onClick={this.props.clickEvent} className="project-card-title">
-                <div>This is a project</div>
+                <div onClick={this.props.clickEvent} className="project-slide-cover">
+                    <div className="project-slide-cover-title">This is a project name</div>
+                    <div className="project-slide-cover-tech">These are the technologies used</div>
+                    <div className="project-slide-cover-description">This is the project descriptioN!</div>
                 </div>
             </div>
         )
