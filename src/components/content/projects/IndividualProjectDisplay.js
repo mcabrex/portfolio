@@ -4,16 +4,16 @@ export default class IndividualProjectDisplay extends Component {
     constructor(props){
         super();
         this.state = {
-            projectName: ""
+            projectName: "",
         };
     }
 
     componentDidMount(){
-        const {imageurl,projectName} = this.props
+        const {imageurl,projectName,width} = this.props
         const project = this.refs.projectCover
         project.style.backgroundImage = imageurl
         this.setState({
-            projectName
+            projectName,
         })
     }
 

@@ -1,0 +1,18 @@
+.scene {
+    &-top {
+        position: absolute;
+        top: 0; //absolute position to load the black bar on the top or bottom
+        height: 50vh;
+        width: 100%; //width has to be 100% to be visible
+        transition: height 2s; //transition for cinematic effect, make sure to remember this when calculating when to show main page (2s === 2000) 
+        background-color: black;
+    }
+    &-bottom {
+        position: absolute;
+        bottom: 0;
+        height: 50vh;
+        width: 100%;
+        transition: height 2s;
+        background-color: black;
+    }
+}

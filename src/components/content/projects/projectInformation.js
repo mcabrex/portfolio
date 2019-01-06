@@ -1,16 +1,16 @@
-const projectTemplate = {
-  name: "",
-  technologies: "",
-  description: "",
-  backgroundImageUrl: "",
-  color: "",
-  links: [
-    {
-      href: "",
-      link: ""
-    },
-  ]
-};
+// const projectTemplate = {
+//   name: "",
+//   technologies: "",
+//   description: "",
+//   backgroundImageUrl: "",
+//   color: "",
+//   links: [
+//     {
+//       href: "",
+//       link: ""
+//     },
+//   ]
+// };
 
 export const projectList = [
   {
