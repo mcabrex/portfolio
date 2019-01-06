@@ -22,6 +22,7 @@ class Content extends Component {
     },2500)
     setTimeout(()=>{
       carousel.style.opacity = 1
+      links.style.opacity = 1
     },4200)
     this.setState({
       description: "developer. engineer. another buzzword."
