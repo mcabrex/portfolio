@@ -9,6 +9,7 @@
 @import './project.scss';
 @import './title.scss';
 @import './scene.scss';
+@import './links.scss';
 
 
 .App {
@@ -33,4 +34,6 @@
     padding: 1.5%;
     height: inherit;
     display: flex;
+    opacity: 0;
+    transition: opacity 3s ease-out;
 }

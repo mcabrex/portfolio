@@ -16,7 +16,7 @@ class App extends Component {
       })
       //time has to be higher than the height timeout function 
       //in the used element (Scene component in this case(1500)) plus the transition length (2000)
-    },3750)
+    },3000)
   }
 
   render() {

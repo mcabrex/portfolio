@@ -19,7 +19,7 @@ export class Scene extends Component {
         //original height 50vh transitioned here to 10vh (10vh being the height of the main pages black bars)
         scene.style.height = "10vh"
         //1500 here is the minimum time to load scenes
-    },1500)
+    },500)
   }
 
   render() {
