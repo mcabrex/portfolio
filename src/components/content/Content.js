@@ -14,6 +14,15 @@ class Content extends Component {
 
   componentDidMount() {
     //set the projects obj to state
+    const {carousel,description} = this.refs
+    setTimeout(()=>{
+      description.style.opacity = 1
+      //have the carousel fade in after title finishes typing itself
+    },3250)
+    setTimeout(()=>{
+      carousel.style.opacity = 1
+      //have the carousel fade in after title finishes typing itself
+    },5000)
     this.setState({
       description: "developer. engineer. another buzzword."
     });
@@ -38,9 +47,9 @@ class Content extends Component {
       <div className="content">
         <div className="title">
           <Title />
-          <h2 className="title-description">{description}</h2>
+          <h2 ref="description" className="title-description">{description}</h2>
         </div>
-        <div className="carousel">
+        <div ref="carousel" className="carousel">
           {/* carousel slides will go here */}
           <ProjectDisplays />
         </div>

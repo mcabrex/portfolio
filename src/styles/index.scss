@@ -33,4 +33,6 @@
     padding: 1.5%;
     height: inherit;
     display: flex;
+    opacity: 0;
+    transition: opacity 3s;
 }
