@@ -31,13 +31,15 @@ export default class ProjectDisplays extends Component {
     if(evt.target.className !== "projects-container"){
       this.setState({
         projectClicked: !currentClickedState,
-        currentProject
+        currentProject,
+        width: currentClickedState ? "10vw" : "65vw"
       })
     } 
   }
 
   render() {
     const { currentProject, projectClicked, projectList } = this.state;
+    
     return (
       <div onClick={this.handleClick} className="projects-container">
         {
@@ -58,6 +60,7 @@ export default class ProjectDisplays extends Component {
           );
           })
         }
+
       </div>
     );
   }

@@ -1,13 +1,4 @@
 .bar {
-    &-top {
-        // position top bar
-        top: 0;
-    }
-    &-bottom {
-        // position bottom bar
-        position: absolute;
-        bottom: 0;
-    }
     &-black {
         background-color: black;
         display: flex;

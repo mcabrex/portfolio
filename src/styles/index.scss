@@ -8,14 +8,17 @@
 @import './projects.scss';
 @import './project.scss';
 @import './title.scss';
+@import './scene.scss';
 
 
 .App {
     text-align: center;
     height: 100vh;
     display: grid;
-    //places cinematic black bars
+    //places cinematic black bars 
     grid-template-rows: 10vh 80vh 10vh;
+    //make sure that the height of the black bars (10vh) is equal to the height of the opening scene bars AFTER transition
+    overflow: hidden;
 }
 
 .content {
@@ -24,7 +27,6 @@
     //flex to place title div at the top, and carousel underneath it to fit the rest of parent container
     display: flex;
     flex-flow: column;
-
 }
 
 .carousel {
