@@ -10,19 +10,19 @@ class Content extends Component {
       description: ""
     };
     this.handleClick = this.handleClick.bind(this);
+    this.handleLinks = this.handleLinks.bind(this);
   }
 
   componentDidMount() {
     //set the projects obj to state
-    const {carousel,description} = this.refs
+    const {carousel,description,links} = this.refs
+    //transition times
     setTimeout(()=>{
       description.style.opacity = 1
-      //have the carousel fade in after title finishes typing itself
-    },3250)
+    },2500)
     setTimeout(()=>{
       carousel.style.opacity = 1
-      //have the carousel fade in after title finishes typing itself
-    },5000)
+    },4200)
     this.setState({
       description: "developer. engineer. another buzzword."
     });
@@ -41,6 +41,11 @@ class Content extends Component {
     });
   }
 
+  handleLinks(evt){
+    const {links} = this.refs
+    links.style.right = "0vw"
+  }
+
   render() {
     const { description } = this.state;
     return (
@@ -53,7 +58,7 @@ class Content extends Component {
           {/* carousel slides will go here */}
           <ProjectDisplays />
         </div>
-        <div>
+        <div onClick={this.handleLinks} ref="links" className="links">
           Some Links ->
           <a
             rel="noopener noreferrer"

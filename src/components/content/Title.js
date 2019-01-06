@@ -24,7 +24,7 @@ class Title extends Component {
       let letter = title[i];
       timer(letter)
       //delay keeps getting stacked on, giving the appearance of gradually being typed
-      delay += 150;
+      delay += 100;
     }
   }
 
