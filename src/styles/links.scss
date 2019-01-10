@@ -1,6 +1,20 @@
 .links {
     opacity: 0;
-   position: relative;
-   right: -61.5vw;
-   transition: all 2s ease-in;
+    position: relative;
+    // right: -24.5rem;
+    transition: all 2s ease-in;
+    &-click {
+        right: 5rem;
+    }
+    &-link {
+        text-decoration: none;
+        font-family: 'Open Sans Condensed', sans-serif;
+        margin: 0.5vw;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .links {
+        right: 0;
+    }
 }

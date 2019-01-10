@@ -14,18 +14,17 @@ class Content extends Component {
   }
 
   componentDidMount() {
+    console.log("wake me up. WAKE ME UP INSIDE")
     //set the projects obj to state
-    const {carousel,description,links} = this.refs
+    const { carousel, description, links } = this.refs;
     //transition times
-    setTimeout(()=>{
-      description.style.opacity = 1
-    },2500)
-    setTimeout(()=>{
-      carousel.style.opacity = 1
-    },4000)
-    setTimeout(()=>{
-      links.style.opacity = 1
-    },6200)
+    setTimeout(() => {
+      description.style.opacity = 1;
+    }, 2500);
+    setTimeout(() => {
+      carousel.style.opacity = 1;
+      links.style.opacity = 1;
+    }, 4000);
     this.setState({
       description: "developer. engineer. another buzzword."
     });
@@ -44,9 +43,9 @@ class Content extends Component {
     });
   }
 
-  handleLinks(evt){
-    const {links} = this.refs
-    links.style.right = "0vw"
+  handleLinks(evt) {
+    const { links } = this.refs;
+    links.style.right = "0vw";
   }
 
   render() {
@@ -55,19 +54,21 @@ class Content extends Component {
       <div className="content">
         <div className="title">
           <Title />
-          <h2 ref="description" className="title-description">{description}</h2>
+          <h2 ref="description" className="title-description">
+            {description}
+          </h2>
         </div>
         <div ref="carousel" className="carousel">
           {/* carousel slides will go here */}
           <ProjectDisplays />
         </div>
         <div onClick={this.handleLinks} ref="links" className="links">
-          Some Links ->
+          <a className="links-click">Some Links -></a>
           <a
             rel="noopener noreferrer"
             href="https://github.com/mcabrex"
             target="_blank"
-            className="title-links"
+            className="links-link"
           >
             github.com/mcabrex
           </a>
@@ -75,7 +76,7 @@ class Content extends Component {
             rel="noopener noreferrer"
             href="https://www.linkedin.com/in/mcabardo/"
             target="_blank"
-            className="title-links"
+            className="links-link"
           >
             linkedin.com/in/mcabardo 
           </a>

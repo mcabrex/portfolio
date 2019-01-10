@@ -9,7 +9,7 @@ export default class IndividualProjectDisplay extends Component {
     }
 
     componentDidMount(){
-        const {imageurl,projectName,width} = this.props
+        const {imageurl,projectName} = this.props
         const project = this.refs.projectCover
         project.style.backgroundImage = imageurl
         this.setState({
